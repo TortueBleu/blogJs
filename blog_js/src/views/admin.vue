@@ -38,7 +38,9 @@ export default {
       let input = document.getElementById("input");
       let text = input.value;
 
-      let test = titleText + "\n" + nameText + "\n" + text + new Date();
+      let DateNow = new Date();
+
+      let test = titleText + "\n" + nameText + "\n" + text + DateNow.toLocaleDateString();
 
       this.contenu.push({ content: test, status: "To Do" });
 
