@@ -1,5 +1,7 @@
 <template>
   <div id="app3">
+    <label>Entrer votre titre : </label>
+    <input type="text" id="titre" />
     <label>Entrer votre texte : </label>
     <input type="text" id="input" />
     <button id="btnTache" @click="addTask()">add</button>
@@ -21,10 +23,14 @@ export default {
   },
   methods: {
     addTask() {
+      let titre = document.getElementById("titre");
+      let titleText = titre.value;
       let input = document.getElementById("input");
       let text = input.value;
+      this.contenu.push({ content: titleText, status: "To Do" });
       this.contenu.push({ content: text, status: "To Do" });
       input.value = "";
+      titre.value = "";
     },
     suppTask(index) {
       this.contenu.splice(index, 1);
