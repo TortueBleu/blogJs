@@ -2,13 +2,13 @@
   <div id="app3">
     <label>Entrer votre titre : </label>
     <input type="text" id="titre" />
-
+    <br/><br/>
     <label>Entrer votre nom : </label>
     <input type="text" id="nom" />
-
+    <br/><br/>
     <label>Entrer votre texte : </label>
     <input type="text" id="input" />
-
+    <br/><br/>
     <button id="btnTache" @click="addTask()">add</button>
     <ol>
       <li v-for="(item, index) in contenu" :key="index">
@@ -37,7 +37,7 @@ export default {
       let input = document.getElementById("input");
       let text = input.value;
 
-      let test = titleText + " " + nameText + " " + text;
+      let test = titleText + "\n" + nameText + "\n" + text;
 
       this.contenu.push({ content: test, status: "To Do" });
 
