@@ -1,20 +1,23 @@
 <template>
   <div id="app3">
     <label>Entrer votre titre : &nbsp;</label>
-    <input type="text" id="titre" />
-    <br/><br/>
+    <input type="text" v-model="titre" />
+    <br /><br />
     <label>Entrer votre nom : &nbsp;</label>
-    <input type="text" id="nom" />
-    <br/><br/>
+    <input type="text" v-model="nom" />
+    <br /><br />
     <label>Entrer votre texte : &nbsp;</label>
-    <textarea rows="8" cols="100" id="input" >
-    </textarea>
-    <br/><br/>
+    <textarea rows="8" cols="100" v-model="text"> </textarea>
+    <br /><br />
     <button id="btnTache" @click="addTask()">add</button>
     <ol>
       <li v-for="(item, index) in contenu" :key="index">
-        {{ item.content }}
+        {{ item.titre }}
+        {{ item.nom }}
+        {{ item.text }}
+        {{ item.date }}
         <button v-on:click="suppTask(index)">Supprimer</button>
+        <button v-on:click="editTexte(index)">Editer</button>
       </li>
     </ol>
   </div>
@@ -25,31 +28,40 @@ export default {
   data() {
     return {
       contenu: [],
+      titre:'',
+      nom:'',
+      text:''
     };
   },
   methods: {
     addTask() {
-      let titre = document.getElementById("titre");
-      let titleText = titre.value;
-
-      let nom = document.getElementById("nom");
-      let nameText = nom.value;
-
-      let input = document.getElementById("input");
-      let text = input.value;
-
       let DateNow = new Date();
 
-      let test = titleText + "\n" + nameText + "\n" + text + DateNow.toLocaleDateString();
+      //   let test =
 
-      this.contenu.push({ content: test, status: "To Do" });
+      this.contenu.push({
+          titre: this.titre ,
+          nom : this.nom,
+          text: this.text,
+          date: DateNow.toLocaleDateString(),
+        status: "To Do",
+      });
 
-      input.value = "";
-      titre.value = "";
-      nom.value = "";
+    //   input.value = "";
+    //   titre.value = "";
+    //   nom.value = "";
+    this.titre = ""
+    this.nom = ""
+    this.text= ""
     },
     suppTask(index) {
       this.contenu.splice(index, 1);
+    },
+    editTexte(index) {
+        const content = this.contenu[index]
+        this.titre = content.titre
+        this.nom = content.nom
+        this.text = content.text
     },
   },
 };
@@ -60,6 +72,6 @@ ol {
   list-style: none;
 }
 label {
-    vertical-align: top;
+  vertical-align: top;
 }
 </style>
