@@ -6,9 +6,13 @@
       <router-link to="/admin">Admin</router-link> |
       <router-link to="/blog">Blog</router-link>
     </div>
+
     <router-view />
   </div>
 </template>
+<script>
+
+</script>
 
 <style>
 #app {
