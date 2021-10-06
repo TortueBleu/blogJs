@@ -7,7 +7,8 @@
     <input type="text" id="nom" />
     <br/><br/>
     <label>Entrer votre texte : </label>
-    <input type="text" id="input" />
+    <textarea rows="8" cols="100" id="input" >
+    </textarea>
     <br/><br/>
     <button id="btnTache" @click="addTask()">add</button>
     <ol>
