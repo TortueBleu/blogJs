@@ -27,8 +27,8 @@ export default {
       let titleText = titre.value;
       let input = document.getElementById("input");
       let text = input.value;
-      this.contenu.push({ content: titleText, status: "To Do" });
-      this.contenu.push({ content: text, status: "To Do" });
+      let test = titleText + " " + text;
+      this.contenu.push({ content: test, status: "To Do" });
       input.value = "";
       titre.value = "";
     },
