@@ -18,3 +18,8 @@ De nos jours, on trouve dans la grande distribution des conserves de cassoulet d
     </p>
   </div>
 </template>
+<style>
+  p {
+    padding: 10%;
+  }
+</style>
