@@ -1,12 +1,12 @@
 <template>
   <div id="app3">
-    <label>Entrer votre titre : </label>
+    <label>Entrer votre titre : &nbsp;</label>
     <input type="text" id="titre" />
     <br/><br/>
-    <label>Entrer votre nom : </label>
+    <label>Entrer votre nom : &nbsp;</label>
     <input type="text" id="nom" />
     <br/><br/>
-    <label>Entrer votre texte : </label>
+    <label>Entrer votre texte : &nbsp;</label>
     <textarea rows="8" cols="100" id="input" >
     </textarea>
     <br/><br/>
@@ -56,5 +56,8 @@ export default {
 <style>
 ol {
   list-style: none;
+}
+label {
+    vertical-align: top;
 }
 </style>
