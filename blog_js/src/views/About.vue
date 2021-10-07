@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>Cassoulet time</h1>
-    <p>
+    <p class="about-p">
       La légende, rapportée par Prosper Montagné, place l'origine du cassoulet dans la ville de Castelnaudary, durant la guerre de Cent Ans (1337-1453). Durant le siège de Castelnaudary par les Anglais, les assiégés affamés auraient réuni tous les vivres disponibles (fèves et viandes), pour confectionner un gigantesque ragoût ou estofat, pour revigorer les combattants. Ceux-ci purent alors chasser les Anglais et libérer la ville.
 
 Cette légende, qui conforte le sentiment nationaliste et fait du cassoulet un défenseur des valeurs françaises, ne résiste cependant pas vraiment à l'analyse. Certes, la ville de Castelnaudary a grandement souffert pendant la guerre de Cent Ans. Elle fut d'ailleurs partiellement brûlée par les troupes du Prince Noir, le 31 octobre 1355. Cette légende reflète ainsi le désir de prendre une revanche sur l'Histoire. D'autre part, les haricots, originaires du continent sud-américain, n'ont été introduits en Europe que beaucoup plus tard (xvie siècle), il s'agit donc plus probablement de fèves, ou de doliques (moujette ou mounjette en occitan), qui étaient consommées à l'époque en ragoût.
@@ -19,7 +19,7 @@ De nos jours, on trouve dans la grande distribution des conserves de cassoulet d
   </div>
 </template>
 <style>
-  p {
-    padding: 10%;
+  .about-p {
+    padding: 5%;
   }
 </style>

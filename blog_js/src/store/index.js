@@ -14,18 +14,18 @@ export default new Vuex.Store({
   state: {
     articles :   [
       {
-        titre : "Article 1",
-        intro : "test 1",
-        date : "06/10/2021",
-        nom: "Tac",
-        content: "bonjour je m'appel léonard"
+        titre : "Cassoulet",
+        intro : "L’origine du cassoulet remonte à la période médiévale",
+        date : "07/10/2021",
+        nom: "Baptiste",
+        content: "Les habitants, menacés par la famine mirent en commun tout ce qu’ils avaient pour nourrir les soldats de la ville. Lard, porc, fèves, saucisses et viandes furent mis à mijoter dans une grande jatte. Revigorés par ce repas, les soldats chauriens boutèrent les Anglais hors du Lauragais et même, jusqu’aux rivages….de la Manche."
       } ,
       {
-        titre : "Article 2",
-        intro : "test 2",
+        titre : "Rendu de liste",
+        intro : "Associer un tableau à des éléments avec v-for",
         date : "07/10/2021",
-        nom : "Tac2",
-        content: "bonjour je m'appel Antoine"
+        nom : "Léonard",
+        content: "Nous pouvons utiliser la directive v-for pour faire le rendu d’une liste d’éléments en nous basant sur un tableau. La directive v-for utilise une syntaxe spécifique de la forme item in items, où items représente le tableau source des données et où item est un alias représentant l’élément du tableau en cours d’itération :"
       } ,
     ],
     

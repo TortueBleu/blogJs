@@ -22,7 +22,7 @@
       <h4>{{ item.intro }}</h4>
       <p>{{ item.nom }}</p>
       
-      <button class="btn btn-primary mb-2">Lire +</button>
+      <router-link :to="`/blog/${index}`"><button class="btn btn-primary mb-2" >Lire +</button></router-link>
       <p>{{ item.date }}</p>
     </div>
     <p>{{ zoulette }}</p>
@@ -38,9 +38,6 @@ export default {
     listArticles() {
       return this.$store.state.articles;
     },
-  },
-  data() {
-    return {};
   },
 };
 </script>
