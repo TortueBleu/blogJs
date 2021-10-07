@@ -13,6 +13,7 @@
     <ol>
       <li v-for="(item, index) in contenu" :key="index">
         {{ item.titre }}
+        
         {{ item.nom }}
         {{ item.text }}
         {{ item.date }}
