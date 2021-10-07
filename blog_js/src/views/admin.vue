@@ -6,6 +6,9 @@
     <label>Entrer votre nom : &nbsp;</label>
     <input type="text" v-model="nom" />
     <br /><br />
+    <label>Entrer votre intro: &nbsp;</label>
+    <input type="text" v-model="intro" />
+    <br /><br />
     <label>Entrer votre texte : &nbsp;</label>
     <textarea rows="8" cols="100" v-model="content"> </textarea>
     <br /><br />
@@ -46,6 +49,7 @@ export default {
       contenu: [],
       titre: "",
       nom: "",
+      intro: "",
       text: "",
     };
   },
@@ -63,6 +67,7 @@ export default {
 
       this.listArticles.push({
         titre: this.titre,
+        intro: this.intro,
         content: this.content,
         date: DateNow.toLocaleDateString(),
         nom: this.nom,
@@ -73,6 +78,7 @@ export default {
       //   nom.value = "";
       this.titre = "";
       this.nom = "";
+      this.intro = "";
       this.content = "";
     },
     suppTask(index) {
@@ -82,8 +88,10 @@ export default {
       const content = this.listArticles[index];
       this.titre = content.titre;
       this.nom = content.nom;
+      this.intro = content.intro
       this.content = content.content;
       this.contenu.splice(index, 1);
+      this.listArticles.splice(index, 1);
     },
   },
 };

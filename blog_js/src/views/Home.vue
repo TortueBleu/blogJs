@@ -19,8 +19,9 @@
       "
     >
       <h1>{{ item.titre }}</h1>
-      <h4>{{ item.nom }}</h4>
-      <p>{{ item.intro }}</p>
+      <h4>{{ item.intro }}</h4>
+      <p>{{ item.nom }}</p>
+      
       <button class="btn btn-primary mb-2">Lire +</button>
       <p>{{ item.date }}</p>
     </div>
