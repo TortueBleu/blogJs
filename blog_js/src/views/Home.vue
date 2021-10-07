@@ -1,18 +1,39 @@
 <template>
-  <div class="home">
-    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div class="home container">
+    <div v-for="item in articles" :key="item" class="w-50 p-3 mx-auto mb-2 border border-secondary rounded shadow p-3 mb-5 bg-white rounded"> 
+        <h1>{{item.titre}}</h1>
+        <h4>{{item.intro}}</h4>
+        <p>{{item.auteur}}</p>
+        <button class="btn btn-primary mb-2">lire Plus</button>
+        <p>{{item.date}}</p>
+    </div>  
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    
   },
+  data() {
+      return{
+        articles :   [
+          {
+            titre : "Article 1",
+            intro : "test 1",
+            date : "06/10/2021",
+            auteur: "Tac"
+          } ,
+          {
+            titre : "Article 2",
+            intro : "test 2",
+            date : "07/10/2021",
+            auteur : "Tac2"
+          } ,
+        ] 
+      }     
+    },
 };
 </script>
