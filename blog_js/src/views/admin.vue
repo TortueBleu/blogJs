@@ -13,7 +13,7 @@
     <ol>
       <li v-for="(item, index) in listArticles" :key="index">
         {{ item.titre }}
-        
+
         {{ item.nom }}
         {{ item.text }}
         {{ item.date }}
@@ -36,8 +36,8 @@ export default {
   },
   computed: {
     listArticles() {
-      return this.$store.state.articles
-    }
+      return this.$store.state.articles;
+    },
   },
 
   methods: {
@@ -61,10 +61,10 @@ export default {
       this.text = "";
     },
     suppTask(index) {
-      this.contenu.splice(index, 1);
+      this.listArticles.splice(index, 1);
     },
     editTexte(index) {
-      const content = this.contenu[index];
+      const content = this.listArticles[index];
       this.titre = content.titre;
       this.nom = content.nom;
       this.text = content.text;
