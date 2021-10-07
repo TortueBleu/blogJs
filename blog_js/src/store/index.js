@@ -26,7 +26,7 @@ export default new Vuex.Store({
         nom : "Tac2"
       } ,
     ],
-    zoulete: "Axel" 
+    
   },
   /*
   Les mutations permettent de modifier la donnée contenue dans la "state"

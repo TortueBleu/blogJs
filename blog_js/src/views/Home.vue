@@ -23,9 +23,7 @@ export default {
     listArticles() {
       return this.$store.state.articles
     },
-    zoulette(){
-      return this.$store.state.zoulette
-    }
+    
   },
   data() {
       return{
