@@ -11,7 +11,7 @@
     <br /><br />
     <button id="btnTache" @click="addTask()">add</button>
     <ol>
-      <li v-for="(item, index) in contenu" :key="index">
+      <li v-for="(item, index) in listArticles" :key="index">
         {{ item.titre }}
         
         {{ item.nom }}
@@ -34,18 +34,23 @@ export default {
       text: "",
     };
   },
+  computed: {
+    listArticles() {
+      return this.$store.state.articles
+    }
+  },
+
   methods: {
     addTask() {
       let DateNow = new Date();
 
       //   let test =
 
-      this.contenu.push({
+      this.listArticles.push({
         titre: this.titre,
-        nom: this.nom,
-        text: this.text,
+        intro: this.text,
         date: DateNow.toLocaleDateString(),
-        status: "To Do",
+        nom: this.nom,
       });
 
       //   input.value = "";

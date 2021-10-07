@@ -6,7 +6,8 @@
         <p>{{item.nom}}</p>
         <button class="btn btn-primary mb-2">lire Plus</button>
         <p>{{item.date}}</p>
-    </div>  
+    </div> 
+    <p>{{zoulette}}</p> 
   </div>
 </template>
 
@@ -21,6 +22,9 @@ export default {
   computed: {
     listArticles() {
       return this.$store.state.articles
+    },
+    zoulette(){
+      return this.$store.state.zoulette
     }
   },
   data() {
