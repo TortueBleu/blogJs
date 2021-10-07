@@ -7,20 +7,35 @@
     <input type="text" v-model="nom" />
     <br /><br />
     <label>Entrer votre texte : &nbsp;</label>
-    <textarea rows="8" cols="100" v-model="text"> </textarea>
+    <textarea rows="8" cols="100" v-model="content"> </textarea>
     <br /><br />
     <button id="btnTache" @click="addTask()">add</button>
-    <ol>
-      <li v-for="(item, index) in listArticles" :key="index">
-        {{ item.titre }}
-
-        {{ item.nom }}
-        {{ item.text }}
-        {{ item.date }}
-        <button v-on:click="suppTask(index)">Supprimer</button>
-        <button v-on:click="editTexte(index)">Editer</button>
-      </li>
-    </ol>
+    <div class="d-flex justify-content-around">
+      <table class="table">
+        <thead>
+          <tr>
+            <td>Titre</td>
+            <td>Nom</td>
+            <td>Intro</td>
+            <td>Contenu</td>
+            <td>Date</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, index) in listArticles" :key="index">
+            <td> {{item.titre}} </td>
+            <td> {{item.nom}} </td>
+            <td>{{item.intro}}</td>
+            <td>{{item.content}}</td>
+            <td>{{item.date}}</td>
+            <button v-on:click="suppTask(index)">Supprimer</button>
+            <button v-on:click="editTexte(index)">Editer</button>
+          </tr>
+        </tbody>
+        
+      </table>
+    </div>    
+    
   </div>
 </template>
 
@@ -48,7 +63,7 @@ export default {
 
       this.listArticles.push({
         titre: this.titre,
-        intro: this.text,
+        content: this.content,
         date: DateNow.toLocaleDateString(),
         nom: this.nom,
       });
@@ -58,7 +73,7 @@ export default {
       //   nom.value = "";
       this.titre = "";
       this.nom = "";
-      this.text = "";
+      this.content = "";
     },
     suppTask(index) {
       this.listArticles.splice(index, 1);
@@ -67,7 +82,7 @@ export default {
       const content = this.listArticles[index];
       this.titre = content.titre;
       this.nom = content.nom;
-      this.text = content.text;
+      this.content = content.content;
       this.contenu.splice(index, 1);
     },
   },
