@@ -28,9 +28,9 @@ export default {
   data() {
     return {
       contenu: [],
-      titre:'',
-      nom:'',
-      text:''
+      titre: "",
+      nom: "",
+      text: "",
     };
   },
   methods: {
@@ -40,28 +40,29 @@ export default {
       //   let test =
 
       this.contenu.push({
-          titre: this.titre ,
-          nom : this.nom,
-          text: this.text,
-          date: DateNow.toLocaleDateString(),
+        titre: this.titre,
+        nom: this.nom,
+        text: this.text,
+        date: DateNow.toLocaleDateString(),
         status: "To Do",
       });
 
-    //   input.value = "";
-    //   titre.value = "";
-    //   nom.value = "";
-    this.titre = ""
-    this.nom = ""
-    this.text= ""
+      //   input.value = "";
+      //   titre.value = "";
+      //   nom.value = "";
+      this.titre = "";
+      this.nom = "";
+      this.text = "";
     },
     suppTask(index) {
       this.contenu.splice(index, 1);
     },
     editTexte(index) {
-        const content = this.contenu[index]
-        this.titre = content.titre
-        this.nom = content.nom
-        this.text = content.text
+      const content = this.contenu[index];
+      this.titre = content.titre;
+      this.nom = content.nom;
+      this.text = content.text;
+      this.contenu.splice(index, 1);
     },
   },
 };
