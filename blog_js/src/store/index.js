@@ -17,13 +17,15 @@ export default new Vuex.Store({
         titre : "Article 1",
         intro : "test 1",
         date : "06/10/2021",
-        nom: "Tac"
+        nom: "Tac",
+        content: "bonjour je m'appel léonard"
       } ,
       {
         titre : "Article 2",
         intro : "test 2",
         date : "07/10/2021",
-        nom : "Tac2"
+        nom : "Tac2",
+        content: "bonjour je m'appel Antoine"
       } ,
     ],
     
