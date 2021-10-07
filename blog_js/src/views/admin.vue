@@ -13,9 +13,8 @@
     <ol>
       <li v-for="(item, index) in listArticles" :key="index">
         {{ item.titre }}
-
         {{ item.nom }}
-        {{ item.text }}
+        {{ item.intro }}
         {{ item.date }}
         <button v-on:click="suppTask(index)">Supprimer</button>
         <button v-on:click="editTexte(index)">Editer</button>
@@ -67,8 +66,8 @@ export default {
       const content = this.listArticles[index];
       this.titre = content.titre;
       this.nom = content.nom;
-      this.text = content.text;
-      this.contenu.splice(index, 1);
+      this.text = content.intro;
+      this.listArticles.splice(index, 1);
     },
   },
 };
